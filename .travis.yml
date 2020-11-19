@@ -1,0 +1,19 @@
+language: node_js
+
+branches:
+  only:
+    - master
+
+install:
+  - yarn
+
+stages:
+  - build
+
+jobs:
+  include:
+    - stage: build
+      script:
+        - yarn build
+      name: "NodeJS 10 build"
+      node_js: "10"
