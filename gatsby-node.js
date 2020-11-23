@@ -22,35 +22,36 @@ const { slash } = require(`gatsby-core-utils`)
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  // query content for WordPress posts
   const result = await graphql(`
     query {
-      allWordpressPost {
+      allDiseaseDetailJson {
         edges {
           node {
-            id
-            slug
-            title
-            content
+            Id
+            Name
+            Synonyms_List__c
+            Disease_Description__c
+            Description_URL__c
+            Disease_Name_Full__c
           }
         }
       }
     }
   `)
 
-  const postTemplate = path.resolve(`./src/templates/post.tsx`)
+  const diseaseTemplate = path.resolve(`./src/templates/disease.tsx`)
 
-  result.data.allWordpressPost.edges.forEach(edge => {
+  result.data.allDiseaseDetailJson.edges.forEach(edge => {
     createPage({
       // will be the url for the page
-      path: `news/${edge.node.slug}`,
+      path: `disease-detail/${edge.node.Id}`,
       // specify the component template of your choice
-      component: slash(postTemplate),
+      component: slash(diseaseTemplate),
       // In the ^template's GraphQL query, 'id' will be available
       // as a GraphQL variable to query for this posts's data.
       context: {
         id: edge.node.id,
-        postData: edge.node,
+        diseaseData: edge.node,
       },
     })
   })

@@ -1,0 +1,26 @@
+[
+  {
+    "attributes": {
+      "type": "GARD_Disease__c",
+      "url": "/services/data/v49.0/sobjects/GARD_Disease__c/a05t0000001XKBiAAO"
+    },
+    "Id": "a05t0000001XKBiAAO",
+    "Name": "Abetalipoproteinemia"
+  },
+  {
+    "attributes": {
+      "type": "GARD_Disease__c",
+      "url": "/services/data/v49.0/sobjects/GARD_Disease__c/a05t0000001XLBqAAO"
+    },
+    "Id": "a05t0000001XLBqAAO",
+    "Name": "Stiff person syndrome"
+  },
+  {
+    "attributes": {
+      "type": "GARD_Disease__c",
+      "url": "/services/data/v49.0/sobjects/GARD_Disease__c/a05t0000001XMalAAG"
+    },
+    "Id": "a05t0000001XMalAAG",
+    "Name": "Malignant migrating partial seizures of infancy"
+  }
+]

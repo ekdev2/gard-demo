@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Example School`,
+    title: `GARD Diseases`,
     description: `Kick off your next, great Gatsby school webpage project with this starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@orzechdev`,
     // must be defined as your domain and not left empty, used by gatsby-plugin-sitemap
@@ -39,18 +39,6 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `./src/data/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        // your WordPress source
-        baseUrl: `demo.wp-api.org`,
-        protocol: `https`,
-        // is it hosted on wordpress.com, or self-hosted?
-        hostingWPCOM: false,
-        // does your site use the Advanced Custom Fields Plugin?
-        useACF: false,
       },
     },
     `gatsby-plugin-sitemap`,

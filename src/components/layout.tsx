@@ -11,6 +11,7 @@ import styled from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 export const Wrapper = styled.div`
   margin: 0 auto;
@@ -34,11 +35,6 @@ const Layout: React.FC = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Wrapper>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </Wrapper>
     </>
   )
